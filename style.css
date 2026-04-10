@@ -1,0 +1,456 @@
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.typing{
+    color:#a855f7;
+    margin-top:10px;
+}
+
+.buttons{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+    background:#0f0f1a;
+    color:#fff;
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+/* NAVBAR UPGRADE */
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: rgba(15,15,26,0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
+}
+
+/* LOGO (MAYUR) */
+nav h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #a855f7, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 30px;
+}
+
+/* LINKS STYLE */
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* HOVER COLOR */
+nav ul li a:hover{
+    color: #a855f7;
+}
+
+/* UNDERLINE ANIMATION */
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #a855f7;
+    transition: 0.3s ease;
+}
+
+/* SHOW UNDERLINE ON HOVER */
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+.hero span{color:#a855f7}
+
+.hero p{
+    margin:10px 0;
+    opacity:.8;
+}
+
+/* CLEAN PROFESSIONAL BUTTON */
+.btn{
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* PRIMARY BUTTON (HIRE ME) */
+.btn:first-child{
+    background: #a855f7;
+    color: #fff;
+    border: none;
+}
+
+/* SECONDARY BUTTON (RESUME) */
+.btn:last-child{
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* HOVER EFFECTS (CLASSY) */
+.btn:first-child:hover{
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+.btn:last-child:hover{
+    border-color: #a855f7;
+    color: #a855f7;
+    transform: translateY(-2px);
+}
+
+/* BUTTON CONTAINER */
+/* BUTTON BASE */
+.btn{
+    position: relative;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+.btn.primary{
+    background: #a855f7;
+    color: #fff;
+    border: none;
+}
+
+/* SECONDARY BUTTON */
+.btn.secondary{
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* HOVER EFFECT */
+.btn.primary:hover{
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+.btn.secondary:hover{
+    border-color: #a855f7;
+    color: #a855f7;
+    transform: translateY(-2px);
+}
+
+/* RIPPLE EFFECT */
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn:active::after{
+    width: 200px;
+    height: 200px;
+}
+
+/* BUTTON CONTAINER */
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* SECTION */
+section{padding:80px 10%}
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #a855f7;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ABOUT */
+.about p{max-width:700px;line-height:1.7}
+
+/* SKILLS */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.skill{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:10px;
+}
+.bar{
+    height:6px;
+    background:#333;
+    border-radius:10px;
+    margin-top:10px;
+}
+.fill{
+    height:100%;
+    background:#a855f7;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:12px;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* CONTACT */
+.contact a{
+    display:block;
+    margin:10px 0;
+    color:#a855f7;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+}
+
+/* ANIMATION */
+.fade{opacity:0;transform:translateY(20px);transition:1s}
+.show{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:768px){
+    nav{padding:15px 20px}
+    .hero h1{font-size:2rem}
+}
+/* UNIVERSAL HOVER EFFECT FOR BOXES */
+.card, .skill {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.card:hover, .skill:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.4);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+/* GLOW BORDER EFFECT */
+.card::before, .skill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(168,85,247,0.4), transparent);
+    transition: 0.5s;
+}
+
+/* ANIMATION ON HOVER */
+.card:hover::before, .skill:hover::before {
+    left: 100%;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(168,85,247,0.8);
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+/* SKILL HOVER IMPROVEMENT */
+.skill{
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.skill:hover{
+    transform: translateY(-8px);
+    border: 1px solid rgba(168,85,247,0.5);
+}
+/* FORCE HORIZONTAL SKILLS */
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* EACH SKILL BOX SIZE */
+.skill{
+    width: 220px;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* NAME HOVER EFFECT */
+.name-hover{
+    display: inline-block;
+    color: #a855f7;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+    cursor: pointer;
+}
+
+/* MOVE UP ON HOVER */
+.name-hover:hover{
+    transform: translateY(-8px);
+    letter-spacing: 1px;
+}
+.name-hover{
+    display: inline-block;
+    color: #a855f7;
+    transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.name-hover:hover{
+    transform: translateY(-10px);
+}
+/* SECTION DIVIDER LINE */
+/* DIVIDER BASE */
+.divider{
+    position: relative;
+    margin-top: 80px;
+}
+
+/* LINE (ANIMATED) */
+.divider::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a855f7,
+        transparent
+    );
+    transition: transform 0.8s ease;
+}
+
+/* DOT IN CENTER */
+.divider::after{
+    content: "●";
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    color: #a855f7;
+    font-size: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* ACTIVE STATE (WHEN VISIBLE) */
+.divider.show::before{
+    transform: translateX(-50%) scaleX(1);
+}
+
+.divider.show::after{
+    transform: translateX(-50%) scale(1);
+}
+/* SCROLL PROGRESS BAR */
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #a855f7, #9333ea);
+    z-index: 2000;
+    transition: width 0.2s ease;
+}
+#progress-bar{
+    box-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
